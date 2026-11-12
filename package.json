@@ -1,0 +1,54 @@
+{
+  "name": "dataporium",
+  "version": "0.1.0",
+  "description": "JavaScript and TypeScript client for the DataPorium Data API: stock prices, company financials, US economic data and US housing data.",
+  "license": "MIT",
+  "author": "DataPorium LLC (https://dataporium.tech)",
+  "homepage": "https://github.com/DataPorium/dataporium-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataPorium/dataporium-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DataPorium/dataporium-js/issues"
+  },
+  "keywords": [
+    "dataporium",
+    "stock data",
+    "financial data",
+    "market data api",
+    "real estate data",
+    "economic data",
+    "mcp",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepare": "npm run build",
+    "test": "npm run build && node node_modules/typescript/bin/tsc -p test/tsconfig.json && node --test test/client.test.mjs",
+    "generate": "node scripts/generate.mjs"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.2"
+  }
+}
