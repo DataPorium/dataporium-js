@@ -17,7 +17,7 @@ const curve = await dp.treasuryYieldsCurve();                      // US Treasur
 const homes = await dp.properties({ zip: "92602", beds_min: 3 });  // homes for sale in a ZIP code
 ```
 
-The same data is available to AI assistants through the [DataPorium MCP server](#use-dataporium-with-ai-assistants-mcp), with the same key. There is also a [Python client](https://github.com/DataPorium/dataporium-python) and [examples in other languages](https://github.com/DataPorium/dataporium-examples).
+The same data is available to AI assistants through the [DataPorium MCP server](#use-dataporium-with-ai-assistants-mcp), with the same key. There is also a [Python client](https://github.com/DataPorium/dataporium-python) and [examples in other languages](https://github.com/DataPorium/financial-data-api).
 
 ## Install
 
@@ -213,7 +213,7 @@ DataPorium runs a Model Context Protocol (MCP) server with 46 tools. Connect it 
 https://mcp.dataporium.io/mcp
 ```
 
-The setup for each app is on the [MCP page](https://dataporium.tech/mcp) and in the [MCP guide](https://github.com/DataPorium/dataporium-python/blob/main/docs/use-with-ai-assistants-mcp.md).
+The setup for each app is on the [MCP page](https://dataporium.tech/mcp) and in [dataporium-mcp](https://github.com/DataPorium/dataporium-mcp).
 
 ## Keep your key safe
 
@@ -239,7 +239,7 @@ The tests never call the real API. `src/endpoints.ts`, `src/generated.ts` and `d
 - MCP server: <https://dataporium.tech/mcp>
 - Pricing: <https://dataporium.tech/pricing>
 - Python client: <https://github.com/DataPorium/dataporium-python>
-- Examples in other languages: <https://github.com/DataPorium/dataporium-examples>
+- Examples in other languages: <https://github.com/DataPorium/financial-data-api>
 - Questions: [open an issue](https://github.com/DataPorium/dataporium-js/issues) or write to info@dataporium.tech
 
 ## License and disclaimer
