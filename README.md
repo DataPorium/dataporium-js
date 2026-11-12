@@ -129,7 +129,7 @@ console.log(rates[0].date, rates[0].value);  // newest value
 import { DataPorium, rows } from "dataporium";
 
 const bars = rows(await dp.stockPrice1d({ ticker: "AAPL" }), "price_history");
-const lines = rows(await dp.incomeStatementsSummary({ symbol: "AAPL", fiscal_year_qtr: "2024Q2" }), "income_statement");
+const lines = rows(await dp.incomeStatementsSummary({ symbol: "AAPL", fiscal_year_qtr: "2025Q4" }), "income_statement");
 ```
 
 ## Examples
@@ -144,7 +144,7 @@ console.log(bitcoin.price_history[0].close);
 The latest lines of a company's income statement:
 
 ```js
-const [period] = await dp.incomeStatementsSummary({ symbol: "AAPL", fiscal_year_qtr: "2024Q2" });
+const [period] = await dp.incomeStatementsSummary({ symbol: "AAPL", fiscal_year_qtr: "2025Q4" });
 const lines = Object.fromEntries(period.income_statement.map((line) => [line.metric, line.value]));
 console.log(period.period_end, lines["Total Revenue"], lines["Net Income"]);
 ```
